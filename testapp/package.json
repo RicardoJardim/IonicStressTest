@@ -22,7 +22,11 @@
     "@capacitor/android": "^2.4.7",
     "@capacitor/core": "2.4.7",
     "@capacitor/ios": "^2.4.7",
+    "@ionic-native/calendar": "^5.32.1",
+    "@ionic-native/contacts": "^5.32.1",
     "@ionic/angular": "^5.5.2",
+    "cordova-plugin-calendar": "^5.1.5",
+    "cordova-plugin-contacts": "^3.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

@@ -1,0 +1,17 @@
+ion-content {
+  --ion-background-color: yellow;
+
+  margin: auto;
+  align-items: center;
+  text-align: center;
+
+  #divElement {
+    color: black;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+  }
+}

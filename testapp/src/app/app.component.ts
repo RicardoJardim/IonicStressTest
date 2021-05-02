@@ -8,3 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   constructor() {}
 }
+
+// myFunc():any{}; <- Don't change UI. Recomended for Pages
+// myFunc = (): any => {} <- Change UI. Recomended for Method of Classes or Components
