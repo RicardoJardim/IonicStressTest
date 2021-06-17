@@ -32,10 +32,10 @@ export class ContactsService {
       console.log(contacts[i]);
       list += contacts[i].displayName + '\n';
     }
-    alert(list);
+    console.log(list);
   }
 
   private onError(contactError) {
-    alert('onError! ' + contactError.toString());
+    console.log('onError! ' + contactError.toString());
   }
 }

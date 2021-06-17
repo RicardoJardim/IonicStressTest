@@ -16,7 +16,7 @@ export class PhotoService {
     });
     const imageUrl = capturedPhoto.webPath;
     // Can be set to the src of an image now
-    alert(imageUrl);
+    console.log(imageUrl);
   }
 
   public async getGallery() {
@@ -29,6 +29,5 @@ export class PhotoService {
     const imageUrl = capturedPhoto.webPath;
     // Can be set to the src of an image now
     console.log(imageUrl);
-    alert(imageUrl);
   }
 }

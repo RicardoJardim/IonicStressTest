@@ -17,10 +17,10 @@ export class FilesystemService {
         encoding: Encoding.UTF8,
       });
       console.log('Wrote file', result.uri);
-      alert(result.uri);
+      console.log(result.uri);
     } catch (e) {
       console.error('Unable to write file', e);
-      alert(e);
+      console.log(e);
     }
   }
 }

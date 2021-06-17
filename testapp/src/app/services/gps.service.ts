@@ -11,6 +11,8 @@ export class GpsService {
   async getCurrentPosition() {
     const coordinates = await Geolocation.getCurrentPosition();
     console.log('Current', coordinates);
-    alert(coordinates.coords.longitude + ' ' + coordinates.coords.latitude);
+    console.log(
+      coordinates.coords.longitude + ' ' + coordinates.coords.latitude
+    );
   }
 }

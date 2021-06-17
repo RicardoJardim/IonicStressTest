@@ -28,10 +28,10 @@ export class CalendarService {
       console.log(contacts[i]);
       list += contacts[i] + '\n';
     }
-    alert(list);
+    console.log(list);
   }
 
   private onError(contactError) {
-    alert('onError! ' + contactError.toString());
+    console.log('onError! ' + contactError.toString());
   }
 }
