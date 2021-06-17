@@ -30,6 +30,7 @@ export class Tab2Page {
     this.prepareDataRequest('users/random_user?size=100').subscribe((data) => {
       // Set the data to display in the template
       this.users = JSON.stringify(data);
+      console.log(this.users);
       this.filesystem.fileWrite('users', this.users);
     });
     this.prepareDataRequest('bank/random_bank?size=100').subscribe((data) => {

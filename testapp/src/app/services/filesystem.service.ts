@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import {
-  Plugins,
-  FilesystemDirectory,
-  FilesystemEncoding,
-} from '@capacitor/core';
-
-const { fileSystem } = Plugins;
+import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 
 @Injectable({
   providedIn: 'root',
@@ -16,11 +10,11 @@ export class FilesystemService {
 
   public async fileWrite(path: string, data: string) {
     try {
-      const result = await fileSystem.writeFile({
+      const result = await Filesystem.writeFile({
         path: `${path}.txt`,
         data,
-        directory: FilesystemDirectory.Data,
-        encoding: FilesystemEncoding.UTF8,
+        directory: Directory.Data,
+        encoding: Encoding.UTF8,
       });
       console.log('Wrote file', result.uri);
       alert(result.uri);
