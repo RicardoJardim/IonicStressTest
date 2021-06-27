@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Observable } from 'rxjs';
 import { FilesystemService } from '../services/filesystem.service';
 @Component({
@@ -19,7 +20,7 @@ export class Tab2Page {
 
   private prepareDataRequest(url: string): Observable<any> {
     // Define the data URL
-    const dataUrl = 'https://random-data-api.com/api/' + url;
+    const dataUrl = 'http://192.168.1.112:3000/' + url;
     // Prepare the request
     return this.http.get(dataUrl);
   }
@@ -27,13 +28,18 @@ export class Tab2Page {
   private onClickFunction = (args: any): void => {
     console.log(new Date());
 
-    this.prepareDataRequest('users/random_user?size=100').subscribe((data) => {
-      // Set the data to display in the template
-      this.users = JSON.stringify(data);
-      console.log(this.users);
-      this.filesystem.fileWrite('users', this.users);
-    });
-    this.prepareDataRequest('bank/random_bank?size=100').subscribe((data) => {
+    this.prepareDataRequest('users?size=100').subscribe(
+      (data) => {
+        // Set the data to display in the template
+        this.users = JSON.stringify(data);
+        console.log(this.users);
+        this.filesystem.fileWrite('users', this.users);
+      },
+      (error) => {
+        alert(error);
+      }
+    );
+    this.prepareDataRequest('banks?size=100').subscribe((data) => {
       // Set the data to display in the template
       this.banks = JSON.stringify(data);
       this.filesystem.fileWrite('banks', this.users);
