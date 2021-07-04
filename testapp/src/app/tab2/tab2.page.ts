@@ -49,14 +49,14 @@ export class Tab2Page {
   private createViews = (): void => {
     console.log(new Date());
     this.btns = [];
-    this.views = Array(1000);
+    this.views = Array(500);
     console.log(new Date());
   };
 
   private createBtns = (): void => {
     console.log(new Date());
     this.btns = [];
-    this.btns = Array(1000);
+    this.btns = Array(500);
     console.log(new Date());
   };
 }
